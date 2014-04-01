@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<f:view contentType="text/html" />
+
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Insert title here</title>
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+</h:head>
+
+<h:body class="container">
+	<p class="alert-success">Usuario #{usuarioMB.usuario.nome} #{usuarioMB.usuario.sobrenome} logado!</p>
+	<h:form>
+		<h:commandLink value="Excluir" action="#{usuarioMB.excluir}" />
+	</h:form>
+</h:body>
+</html>
