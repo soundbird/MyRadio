@@ -52,6 +52,16 @@ public class UsuarioMB {
 		}
 		return "";
 	}
+
+	public String atualizar() {
+		EntityManager em = JPAUtil.getEntityManager();
+		UsuarioDAO dao = new UsuarioDAO(em);
+		em.getTransaction().begin();
+		dao.alterar(usuario);
+		em.getTransaction().commit();
+		em.close();
+		return "usuario?faces-redirect=true";
+	}
 	
 	public String excluir(){
 		EntityManager em = JPAUtil.getEntityManager();

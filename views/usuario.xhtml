@@ -13,7 +13,8 @@
 <h:body class="container">
 	<p class="alert-success">Usuario #{usuarioMB.usuario.nome} #{usuarioMB.usuario.sobrenome} logado!</p>
 	<h:form>
-		<h:commandLink value="Excluir" action="#{usuarioMB.excluir}" />
+		<h:commandButton value="Excluir" action="#{usuarioMB.excluir}" />
+		<h:commandButton value="Alterar" action="usuario/alterar?faces-redirect=true" />
 	</h:form>
 </h:body>
 </html>

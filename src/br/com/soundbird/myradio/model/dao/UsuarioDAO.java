@@ -3,6 +3,7 @@ package br.com.soundbird.myradio.model.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.LockModeType;
 import javax.persistence.Query;
 
 import br.com.soundbird.myradio.model.bean.Usuario;
@@ -24,7 +25,7 @@ public class UsuarioDAO {
 	}
 	
 	public void excluir(Usuario usuario) {
-		entityManager.refresh(usuario);
+		usuario = entityManager.merge(usuario);
 		entityManager.remove(usuario);
 	}
 	
