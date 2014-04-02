@@ -2,7 +2,6 @@
 *.swp
 build/
 .classpath
-.project
 .settings/
 
 *.class
